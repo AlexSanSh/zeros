@@ -1,14 +1,11 @@
 module.exports = function getZerosCount(number) {
   let count = 0;
-  function isDevide(n){
-    if(n%5===0) {
-      count++;
-      isDevide(n/5);
+  for (let i = number; i >=5; i--) {
+          for (let j = i; j>=5; j=j/5) {
+            if (j%5===0) count++ ;
+            else break;
+          }
     }
-  }
-  for (var i = number; i >=1; i--) {
-    if (i%5==0) isDevide(i);
-  }
   return count;
 }
 
