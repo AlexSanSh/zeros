@@ -7,8 +7,9 @@ module.exports = function getZerosCount(number) {
     }
   }
   for (var i = number; i >=1; i--) {
-    isDevide(i);
+    if (i%5==0) isDevide(i);
   }
   return count;
 }
+
 
